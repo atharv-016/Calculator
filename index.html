@@ -1,0 +1,75 @@
+<!-- HTML (index.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button class="backspace" onclick="deleteLastDigit()">⌫</button>
+            <button class="operator" onclick="appendToDisplay('%')">%</button>
+            <button class="operator" onclick="appendToDisplay('/')">÷</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button class="operator" onclick="appendToDisplay('*')">×</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button class="operator" onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button class="operator" onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('00')">00</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button class="equal" onclick="calculateResult()">=</button>
+        </div>
+        
+        <button class="more-options small-icon" onclick="toggleMoreOptions()">☰</button>
+            <br>
+        <div id="more-options" class="more-options-panel" style="display: none;">
+            <br>
+            <button onclick="setMode('scientific')">🔬 Scientific</button>
+            <br>
+            <button onclick="setMode('programmer')">💻 Programmer</button>
+            <br>
+            <button onclick="setMode('graphing')">📈 Graphing</button>
+            <br>
+            <button onclick="setMode('temperature')">🌡️ Temperature</button>
+            <br>
+            <button onclick="setMode('date')">📅 Date Calculation</button>
+        </div>
+        
+        <div id="scientific" class="mode" style="display: none;">
+            <input type="text" id="displayScientific" readonly>
+            <button class="operator" onclick="calculatePower()">x²</button>
+            <button class="operator" onclick="calculateCubeRoot()">∛x</button>
+            <button class="operator" onclick="calculateFactorial()">n!</button>
+            <button class="operator" onclick="calculateSin()">sin</button>
+            <button class="operator" onclick="calculateCos()">cos</button>
+            <button class="operator" onclick="calculateTan()">tan</button>
+        </div>
+        
+        <div id="temperature" class="mode" style="display: none;">
+            <input type="number" id="tempInput" placeholder="Enter Temperature">
+            <button onclick="convertTemperature()">Convert</button>
+        </div>
+        
+        <div id="date" class="mode" style="display: none;">
+            <input type="date" id="date1"> to <input type="date" id="date2">
+            <button onclick="calculateDateDifference()">Calculate Difference</button>
+            <input type="text" id="displayDate" readonly>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
