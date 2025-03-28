@@ -91,7 +91,5 @@ function calculateDateDifference() {
     let days = difference / (1000 * 60 * 60 * 24);
     document.getElementById("displayDate").value = days + " days";
 
-let music = document.getElementById("background-music");
-
 
 
