@@ -90,6 +90,7 @@ function calculateDateDifference() {
     let difference = Math.abs(date2 - date1);
     let days = difference / (1000 * 60 * 60 * 24);
     document.getElementById("displayDate").value = days + " days";
+}
 
 
 document.querySelectorAll("button").forEach(button => {
