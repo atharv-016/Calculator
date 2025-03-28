@@ -90,4 +90,14 @@ function calculateDateDifference() {
     let difference = Math.abs(date2 - date1);
     let days = difference / (1000 * 60 * 60 * 24);
     document.getElementById("displayDate").value = days + " days";
+
+let music = document.getElementById("background-music");
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+}
 }
