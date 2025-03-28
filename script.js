@@ -104,5 +104,28 @@ function calculateDateDifference() {
     let days = difference / (1000 * 60 * 60 * 24);
     document.getElementById("displayDate").value = days + " days";
 }
+function handleKeyPress(event) {
+    if (event.key === "Enter") {
+        calculateResult();
+    }
+}
+
+
+function isNumber(event) {
+    let charCode = event.which ? event.which : event.keyCode;
+    if (charCode >= 48 && charCode <= 57) { // Allow 0-9
+        return true;
+    }
+    if (charCode === 46 || charCode === 43 || charCode === 45 || charCode === 42 || charCode === 47) { // Allow ., +, -, *, /
+        return true;
+    }
+    return false; // Block everything else
+}
+
+
+document.getElementById("display").addEventListener("paste", function(e) {
+    e.preventDefault(); // Block pasting
+});
+
 
 
