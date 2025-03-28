@@ -1,9 +1,21 @@
 // JavaScript (index.js)
 
-// Function to append values to the display
 function appendToDisplay(value) {
-    document.getElementById("display").value += value;
+    let display = document.getElementById("display");
+
+    // Prevent multiple decimal points
+    if (value === '.' && display.value.includes('.')) {
+        return; // Stop adding another decimal
+    }
+
+    // Allow only integers (no decimal)
+    if (value === '.') {
+        return; // Stop decimal input
+    }
+
+    display.value += value;
 }
+
 
 // Function to clear the display
 function clearDisplay() {
@@ -16,14 +28,15 @@ function deleteLastDigit() {
     display.value = display.value.slice(0, -1);
 }
 
-// Function to evaluate the entered expression
 function calculateResult() {
     try {
-        document.getElementById("display").value = eval(document.getElementById("display").value);
+        let result = eval(document.getElementById("display").value);
+        document.getElementById("display").value = Math.round(result); // Round to integer
     } catch (error) {
         document.getElementById("display").value = "Error";
     }
 }
+
 
 // Function to toggle the more options panel
 function toggleMoreOptions() {
