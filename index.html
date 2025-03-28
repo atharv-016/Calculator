@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atharv's Calculator</title>
-   <link rel="icon" type="image/png" href="atharv.png">
+    <link rel="icon" type="image/png" href="atharv.png">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    
     <div class="calculator">
-        <input type="text" id="display">
+    
+        <input type="text" id="display" readonly>
         <div class="buttons">
             <button class="clear" onclick="clearDisplay()">C</button>
             <button class="backspace" onclick="deleteLastDigit()">⌫</button>
@@ -36,6 +37,7 @@
         <br>
         <button class="more-options small-icon" onclick="toggleMoreOptions()">☰</button>
         <br><br>
+        
         <div id="more-options" class="more-options-panel" style="display: none;">
             <br><br><br>
             <button onclick="setMode('scientific')">🔬 Scientific</button>
@@ -69,10 +71,21 @@
             <button onclick="calculateDateDifference()">Calculate Difference</button>
             <input type="text" id="displayDate" readonly>
         </div>
-        
-    </div>
+    
+<!-- Play Music Button -->
+<button id="play-music" onclick="toggleMusic()">🔊 <b>EEYUH (SUPER+SLOWED)</b></button>
 
+<!-- Audio Element -->
+<audio id="background-music" src="eeyuh_super_slowed.mp3" loop></audio>
+
+        
+
+    
+        
+    
 
     <script src="script.js"></script>
 </body>
 </html>
+
+
