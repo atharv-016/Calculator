@@ -92,14 +92,4 @@ function calculateDateDifference() {
     document.getElementById("displayDate").value = days + " days";
 }
 
-let music = document.getElementById("background-music");
-
-function toggleMusic() {
-    if (music.paused) {
-        music.play();
-    } else {
-        music.pause();
-    }
-}
-
 
