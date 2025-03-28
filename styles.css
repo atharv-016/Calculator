@@ -45,16 +45,6 @@ button {
 .backspace { background: gray; color: white; }
 button:hover { opacity: 0.8; }
 
-#play-music {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: hsl(182, 47%, 40%); 
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size
 
 
 
