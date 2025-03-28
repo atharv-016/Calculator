@@ -100,4 +100,4 @@ function toggleMusic() {
         music.pause();
     }
 }
-}
+
