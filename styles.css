@@ -3,7 +3,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw; 
+    margin: 0;      
     background-color: #f4f4f4;
+}
+
 }
 .calculator {
     width: 300px;
@@ -29,7 +33,9 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    grid-auto-flow: row dense; /* Ensures proper alignment */
 }
+
 button {
     width: 100%;
     height: 60px;
@@ -38,7 +44,9 @@ button {
     cursor: pointer;
     border-radius: 5px;
     transition: 0.2s;
+    pointer-events: auto; /* Ensure buttons remain clickable */
 }
+
 .operator { background: orange; color: white; }
 .equal { background: green; color: white; }
 .clear { background: red; color: white; }
