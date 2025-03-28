@@ -92,4 +92,9 @@ function calculateDateDifference() {
     document.getElementById("displayDate").value = days + " days";
 
 
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", function () {
+        console.log(this.innerText); // Debugging
+    });
+});
 
