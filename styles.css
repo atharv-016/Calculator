@@ -12,7 +12,7 @@ body {
     background: #222;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 #display {
-    width: 100%;  /* Ensures it fits the container */
+    width: 94%;  /* Ensures it fits the container */
     height: 60px; /* Adjust height to match buttons */
     font-size: 2rem; /* Increase readability */
     text-align: right; /* Ensures numbers align to right */
